@@ -66,7 +66,7 @@ function exportSelectedRowToPDF() {
     let serviceQuantity = [service1Quantity, service2Quantity, service3Quantity, service4Quantity, service5Quantity][i] || 0;
 
     serviceFee = parseFloat(serviceFee);
-    serviceQuantity = parseInt(serviceQuantity, 10) || (serviceListed.trim() ? 1 : 0);
+    serviceQuantity = parseFloat(serviceQuantity) || (serviceListed.trim() ? 1 : 0);
 
     if (serviceListed.trim() !== '') {
       services.push({
